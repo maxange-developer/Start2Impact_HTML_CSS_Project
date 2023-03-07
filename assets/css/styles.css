@@ -1,0 +1,1351 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/assets/font/Roboto-Regular.eot) format(eot);
+    src: url(/assets/font/Roboto-Regular.otf) format(otf);
+    src: url(/assets/font/Roboto-Regular.ttf) format(ttf);
+    src: url(/assets/font/Roboto-Regular.woff) format(woff);
+    src: url(/assets/font/Roboto-Regular.woff2) format(woff2);
+}
+
+/* Il sito è impostato per layout smartphone da 350px a 490px di larghezza */
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    color: #007fff;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(/assets/images/background.png);
+}
+
+
+
+/* Styling Navbar */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 5px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+
+    font-size: 13px;
+    list-style-type: none;
+}
+
+ul a {
+    padding: 2px 6px 2px 6px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+ul a:visited {
+    text-decoration: none;
+}
+
+ul a:focus {
+    outline: none;
+}
+
+ul a:hover{
+    background-color: #007fff;
+    color: white;
+}
+
+ul a:active {
+    background-color: #d6f2ff;
+    color: #007fff;
+}
+
+
+
+/* Styling Home section */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+.img-container {
+    padding: 0;
+    border: 3px solid #007fff;
+    border-radius: 50%;
+    background-color: #d6f2ff;
+}
+
+.img-container img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.presentation h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    
+    font-size: 15px;
+}
+
+.presentation h1 img {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.presentation h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+
+/* Styling Biography section */
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+#bio h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px;
+    font-size: 15px
+}
+
+#bio h1 img {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#bio p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+
+    max-width:250px;
+
+    background-color: white;
+    border: 5px solid lightblue;
+    border-radius: 30px;
+}
+
+
+
+/* Styling Portfolio section */
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+#portfolio h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+    padding: 5px;
+}
+
+#portfolio h1 img {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    padding: 40px;
+
+    background-color: white;
+    border: 5px solid lightblue;
+    border-radius: 30px;
+}
+
+.gif img {
+    width: 60px;
+    height: auto;
+}
+
+
+
+/* Styling Skills section */
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+#skills h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+#skills h1 img {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.grid {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px;
+    gap: 5px;
+
+    padding: 10px;
+
+    background-color: white;
+    border: 5px solid lightblue;
+    border-radius: 30px;
+}
+
+.box1, 
+.box2,
+.box3,
+.box4,
+.box5,
+.box6{
+    display: flex;
+    align-items: center;
+}
+
+.box1 img,
+.box2 img, 
+.box3 img,
+.box4 img,
+.box5 img,
+.box6 img {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+
+    width: 45px;
+    height: auto;
+}
+
+.grid h2 {
+    font-size: 10px;
+    padding: 5px;
+}
+
+
+
+/* Styling Contact Section */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+#contact h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+#contact h1 img{
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin: auto;
+
+    background-color: white;
+    border: 5px solid lightblue;
+    border-radius: 30px;
+}
+
+button,
+input,
+textarea {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 8px;
+}
+
+textarea {
+    overflow: auto;
+
+    width: 150px;
+    height: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 150px;
+    height: 20px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border: 1px solid lightblue;
+}
+
+input[type="text"]:active,
+input[type="email"]:active,
+textarea:active {
+    border: 1px solid lightblue;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid lightblue;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+button {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid lightblue;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border-radius: 10px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #007fff;
+}
+
+button {
+    padding: 5px;
+    width: 60px;
+    height: 20px;
+
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #007fff;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+/* Styling Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+footer img {
+    margin: 2px;
+    width: 20px;
+    height: auto;
+}
+
+footer .logo {
+    width: 15px;
+}
+
+footer a:focus {
+    outline: none;
+}
+
+
+
+/* Media Query 0px -> 350px */
+
+@media screen and (max-width: 350px) {
+    ul {
+        font-size: 9px;
+    }
+    
+    .img-container img {
+        width: 50px;
+    }
+
+    .presentation h1 {
+        font-size: 12px;
+    }
+
+    .presentation h2 {
+        font-size: 8px;
+    }
+}
+
+
+
+/* Media Query 490px -> 600px */
+
+@media screen and (min-width: 490px) and (max-width: 600px) {
+
+    /* General media queries */
+
+    #home,
+    #bio,
+    #portfolio,
+    #skills,
+    #contact,
+    footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    
+    #bio p,
+    .gif,
+    .grid,
+    form {
+        border: 6px solid lightblue;
+        border-radius: 30px;
+    }
+
+    /* Navbar media queries */
+
+    ul {
+        font-size: 18px;
+    }
+
+    ul a {
+        padding: 4px 8px 4px 8px;
+    }
+
+    
+
+    /* Home media queries */
+
+    .img-container {
+        border: 5px solid #007fff
+    }
+
+    .img-container img {
+        width: 120px;
+    }
+
+    .presentation h1 {
+        font-size: 20px;
+    }
+
+    .presentation h2 {
+        font-size: 13px;
+    }
+
+    /* Section Heading media queries */
+
+    #bio h1,
+    #portfolio h1,
+    #skills h1,
+    #contact h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .presentation h1 img,
+    #bio h1 img,
+    #portfolio h1 img,
+    #skills h1 img,
+    #contact h1 img {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    /* Bio media queries */
+
+    #bio p {
+        font-size: 13px;
+        padding: 20px;
+
+        max-width: 300px;
+    }
+
+    /* Portfolio media queries */
+
+    .gif {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gif img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* Skills media queries */
+
+    .grid {
+        grid-auto-rows: 60px;
+    }
+
+    .box1 img,
+    .box2 img, 
+    .box3 img,
+    .box4 img,
+    .box5 img,
+    .box6 img {
+
+        padding: 10px;
+        width: 60px;
+    }
+
+    .grid h2 {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* Contact media queries */
+
+    textarea {
+        width: 200px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 200px;
+        height: 30px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+    button {
+        width: 80px;
+        height: 30px;
+
+        font-size: 11px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    button {
+        border-radius: 20px;
+        border: 2px solid lightblue;
+    }
+
+    /* Footer media queries */
+
+    footer img {
+        margin: 4px;
+        width: 30px;
+        height: auto;
+    }
+
+    footer .logo {
+        width: 24px;
+    }
+}
+
+/* Media Query 601px -> 768px */
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+    /* General media queries */
+
+    #home,
+    #bio,
+    #portfolio,
+    #skills,
+    #contact,
+    footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #bio p,
+    .gif,
+    .grid,
+    form {
+        border: 7px solid lightblue;
+        border-radius: 40px;
+    }
+
+    /* Navbar media queries */
+
+    nav {
+        padding-top: 15px;
+    }
+
+    ul {
+        font-size: 20px;
+    }
+
+    ul a {
+        padding: 6px 12px 6px 12px;
+    }
+
+    /* Home media queries */
+
+    .img-container {
+        border: 6px solid #007fff
+    }
+
+    .img-container img {
+        width: 140px;
+    }
+
+    .presentation {
+        padding: 15px;
+    }
+
+    .presentation h1 {
+        font-size: 25px;
+    }
+
+    .presentation h2 {
+        font-size: 18px;
+    }
+
+    /* Section Heading media queries */
+
+    #bio h1,
+    #portfolio h1,
+    #skills h1,
+    #contact h1 {
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    .presentation h1 img,
+    #bio h1 img,
+    #portfolio h1 img,
+    #skills h1 img,
+    #contact h1 img {
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+
+    /* Bio media queries */
+
+    #bio p {
+        font-size: 18px;
+        padding: 20px;
+
+        max-width: 350px;
+    }
+
+    /* Portfolio media queries */
+
+    .gif {
+        width: 250px;
+        height: 250px;
+    }
+
+    .gif img {
+        width: 100px;
+        height: auto;
+    }
+
+    /* Skills media queries */
+
+    .grid {
+        grid-auto-rows: 80px;
+    }
+
+    .box1 img,
+    .box2 img, 
+    .box3 img,
+    .box4 img,
+    .box5 img,
+    .box6 img {
+
+        padding: 10px;
+        width: 80px;
+    }
+
+    .grid h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* Contact media queries */
+
+    form {
+        padding: 15px;
+    }
+
+    textarea {
+        width: 250px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 250px;
+        height: 35px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        font-size: 16px;
+
+        padding: 12px;
+        margin: 3px;
+    }
+
+    button {
+        width: 90px;
+        height: 35px;
+
+        font-size: 13px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    button {
+        border-radius: 20px;
+        border: 2px solid lightblue;
+    }
+
+    /* Footer media queries */
+
+    footer img {
+        margin: 4px;
+        width: 40px;
+        height: auto;
+    }
+
+    footer .logo {
+        width: 31px;
+    }
+}
+
+/* Media Query 769px -> 1024px */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+        /* General media queries */
+
+    #home,
+    #bio,
+    #portfolio,
+    #skills,
+    #contact,
+    footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #bio p,
+    .gif,
+    .grid,
+    form {
+        border: 8px solid lightblue;
+        border-radius: 40px;
+    }
+
+    /* Navbar media queries */
+
+    nav {
+        padding-top: 20px;
+    }
+
+    ul {
+        font-size: 25px;
+    }
+
+    ul a {
+        padding: 8px 14px 8px 14px;
+    }
+
+    /* Home media queries */
+
+    .img-container {
+        border: 7px solid #007fff
+    }
+
+    .img-container img {
+        width: 160px;
+    }
+
+    .presentation {
+        padding: 20px;
+    }
+
+    .presentation h1 {
+        font-size: 30px;
+    }
+
+    .presentation h2 {
+        font-size: 20px;
+    }
+
+    /* Section Heading media queries */
+
+    #bio h1,
+    #portfolio h1,
+    #skills h1,
+    #contact h1 {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .presentation h1 img,
+    #bio h1 img,
+    #portfolio h1 img,
+    #skills h1 img,
+    #contact h1 img {
+        width: 70px;
+        height: 70px;
+        padding: 13px;
+    }
+
+    /* Bio media queries */
+
+    #bio p {
+        font-size: 20px;
+        padding: 25px;
+
+        max-width: 450px;
+    }
+
+    /* Portfolio media queries */
+
+    .gif {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gif img {
+        width: 110px;
+        height: auto;
+    }
+
+    /* Skills media queries */
+
+    .grid {
+        grid-auto-rows: 110px;
+    }
+
+    .box1 img,
+    .box2 img, 
+    .box3 img,
+    .box4 img,
+    .box5 img,
+    .box6 img {
+
+        padding: 10px;
+        width: 90px;
+    }
+
+    .grid h2 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* Contact media queries */
+
+    form {
+        padding: 20px;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 300px;
+        height: 40px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        font-size: 18px;
+
+        padding: 13px;
+        margin: 5px;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+
+        font-size: 14px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    button {
+        border-radius: 20px;
+        border: 2px solid lightblue;
+    }
+
+    /* Footer media queries */
+
+    footer img {
+        margin: 5px;
+        width: 45px;
+        height: auto;
+    }
+
+    footer .logo {
+        width: 34px;
+    }
+    
+}
+
+/* Media Query 1025px -> 1200px */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    /* General media queries */
+
+    #home,
+    #bio,
+    #portfolio,
+    #skills,
+    #contact,
+    footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #bio p,
+    .gif,
+    .grid,
+    form {
+        border: 10px solid lightblue;
+        border-radius: 50px;
+    }
+
+    /* Navbar media queries */
+
+    nav {
+        padding-top: 30px;
+    }
+
+    ul {
+        font-size: 35px;
+    }
+
+    ul a {
+        padding: 10px 20px 10px 20px;
+    }
+
+    /* Home media queries */
+
+    .img-container {
+        border: 8px solid #007fff
+    }
+
+    .img-container img {
+        width: 200px;
+    }
+
+    .presentation {
+        padding: 30px;
+    }
+
+    .presentation h1 {
+        font-size: 40px;
+    }
+
+    .presentation h2 {
+        font-size: 25px;
+    }
+
+    /* Section Heading media queries */
+
+    #bio h1,
+    #portfolio h1,
+    #skills h1,
+    #contact h1 {
+        font-size: 40px;
+        padding: 25px;
+    }
+
+    .presentation h1 img,
+    #bio h1 img,
+    #portfolio h1 img,
+    #skills h1 img,
+    #contact h1 img {
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+    }
+
+    /* Bio media queries */
+
+    #bio p {
+        font-size: 25px;
+        padding: 25px;
+
+        max-width: 600px;
+    }
+
+    /* Portfolio media queries */
+
+    .gif {
+        width: 350px;
+        height: 350px;
+    }
+
+    .gif img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Skills media queries */
+
+    .grid {
+        grid-auto-rows: 120px;
+    }
+
+    .box1 img,
+    .box2 img, 
+    .box3 img,
+    .box4 img,
+    .box5 img,
+    .box6 img {
+
+        padding: 15px;
+        width: 110px;
+    }
+
+    .grid h2 {
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    /* Contact media queries */
+
+    form {
+        padding: 30px;
+    }
+
+    textarea {
+        width: 350px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 350px;
+        height: 50px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        font-size: 23px;
+
+        padding: 15px;
+        margin: 8px;
+    }
+
+    button {
+        width: 130px;
+        height: 50px;
+
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    button {
+        border-radius: 50px;
+        border: 2px solid lightblue;
+    }
+
+    textarea {
+        border-radius: 20px;
+        border: 2px solid lightblue;
+    }
+
+    /* Footer media queries */
+
+    footer img {
+        margin: 6px;
+        width: 55px;
+        height: auto;
+    }
+
+    footer .logo {
+        width: 42px;
+    }
+    
+}
+
+/* Media Query 1201px + */
+
+@media screen and (min-width: 1201px) {
+
+        /* General media queries */
+
+        #home,
+        #bio,
+        #portfolio,
+        #skills,
+        #contact,
+        footer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    
+        #bio p,
+        .gif,
+        .grid,
+        form {
+            border: 12px solid lightblue;
+            border-radius: 60px;
+        }
+    
+        /* Navbar media queries */
+    
+        nav {
+            padding-top: 40px;
+        }
+    
+        ul {
+            font-size: 40px;
+        }
+    
+        ul a {
+            padding: 12px 24px 12px 24px;
+        }
+    
+        /* Home media queries */
+    
+        .img-container {
+            border: 10px solid #007fff
+        }
+    
+        .img-container img {
+            width: 250px;
+        }
+    
+        .presentation {
+            padding: 40px;
+        }
+    
+        .presentation h1 {
+            font-size: 50px;
+        }
+    
+        .presentation h2 {
+            font-size: 30px;
+        }
+    
+        /* Section Heading media queries */
+    
+        #bio h1,
+        #portfolio h1,
+        #skills h1,
+        #contact h1 {
+            font-size: 50px;
+            padding: 30px;
+        }
+    
+        .presentation h1 img,
+        #bio h1 img,
+        #portfolio h1 img,
+        #skills h1 img,
+        #contact h1 img {
+            width: 100px;
+            height: 100px;
+            padding: 15px;
+        }
+    
+        /* Bio media queries */
+    
+        #bio p {
+            font-size: 30px;
+            padding: 40px;
+    
+            max-width: 650px;
+        }
+    
+        /* Portfolio media queries */
+    
+        .gif {
+            width: 450px;
+            height: 450px;
+        }
+    
+        .gif img {
+            width: 150px;
+            height: auto;
+        }
+    
+        /* Skills media queries */
+    
+        .grid {
+            grid-auto-rows: 150px;
+        }
+    
+        .box1 img,
+        .box2 img, 
+        .box3 img,
+        .box4 img,
+        .box5 img,
+        .box6 img {
+    
+            padding: 20px;
+            width: 150px;
+        }
+    
+        .grid h2 {
+            font-size: 30px;
+            padding: 30px;
+        }
+    
+        /* Contact media queries */
+    
+        form {
+            padding: 50px;
+        }
+    
+        textarea {
+            width: 450px;
+        }
+    
+        input[type="text"],
+        input[type="email"] {
+            width: 450px;
+            height: 70px;
+        }
+    
+        textarea,
+        input[type="text"],
+        input[type="email"] {
+            font-size: 28px;
+    
+            padding: 25px;
+            margin: 10px;
+        }
+    
+        button {
+            width: 180px;
+            height: 60px;
+
+            margin: 10px;
+    
+            font-size: 23px;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        button {
+            border-radius: 50px;
+            border: 3px solid lightblue;
+        }
+    
+        textarea {
+            border-radius: 40px;
+            border: 3px solid lightblue;
+        }
+    
+        /* Footer media queries */
+    
+        footer img {
+            margin: 8px;
+            width: 70px;
+            height: auto;
+        }
+    
+        footer .logo {
+            width: 53px;
+        }
+    
+}

@@ -5,8 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massi Angelone | Full Stack Developer</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 <body>
+        <!-- Aggiungo Barra di Navigazione con i vari Link -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#bio">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
     
+        <!-- Aggiungo la prima Section Home, dove inserisco l'immagine e la presentazione -->
+    
+        <section id="home">
+            <div class="img-container">
+                <img src="assets/images/profilo.png">
+            </div>
+            <div class="presentation">
+                <h1>Hi!<img src="/assets/images/emoji_ciao.png"> I'm Massimiliano Angelone</h1>
+                <h2>Full Stack Developer</h2>
+            </div>
+        </section>
+    
+        <!-- Aggiungo un'altra Section in cui inserirò la Biografia -->
+    
+        <section id="bio">
+            <h1>About Me <img src="/assets/images/emoji_worker.png"></h1>
+            <p>Hi, I'm Massimiliano from Ancona, Italy. <br> <br>
+                I'm a future Full-Stack Developer. <br> <br>
+                I love everything related to the web. Especially programming, web design, social media and metaverse. <br> <br>
+                I love animals and any kind of sports. My hobbies are cooking, training and reading. <br> <br>
+                I'm a sociable person, always positive and smiling and who loves life and all its nuances. <br> <br>
+                I hope that one day the world will be a better place where peace, love and happiness will reign. <br> <br>
+                Every day I spend, my goal is always to help others in any way I can. <br>
+            </p>
+        </section>
+    
+        <!-- Aggiungo la Section Portfolio in cui andrò a mettere una gif di caricamento per far capire che questa parte verrà completata man mano che faccio i progetti  -->
+    
+        <section id="portfolio">
+            <h1>Portfolio <img src="/assets/images/emoji_valigetta.png"></h1>
+            <div class="gif">
+                <img src="/assets/GIFs/load_gif.gif">
+            </div>
+        </section>
+    
+        <!-- Aggiungo la Section Skills in cui andrò a fare una lista con i programmi che so usare. Aggiungerò un'immagine con affianco il nome del programma -->
+    
+        <section id="skills">
+            <h1>Skills <img src="/assets/images/emoji_skills.png"></h1>
+            <div class="grid">
+                <div class="box1">
+                    <img src="/assets/images/html-logo.svg">
+                    <h2>HTML</h2>
+                </div>
+                <div class="box2">
+                    <img src="/assets/images/css-logo.svg">
+                    <h2>CSS</h2>
+                </div>
+                <div class="box3">
+                    <img src="/assets/images/bootstrap-logo.svg">
+                    <h2>Bootstrap</h2>
+                </div>
+                <div class="box4">
+                    <img src="/assets/images/github-logo.svg">
+                    <h2>GitHub</h2>
+                </div>
+                <div class="box5">
+                    <img src="/assets/images/sass-logo.svg">
+                    <h2>SASS</h2>
+                </div>
+                <div class="box6">
+                    <img src="/assets/images/wordpress-logo.svg">
+                    <h2>Wordpress</h2>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Aggiungo la Section Contact in cui farò un form per essere contattato -->
+    
+        <section id="contact">
+            <h1>Chat with me! <img src="/assets/images/emoji_lettera.png"></h1>
+            <form target="_blank" action="https://formsubmit.co/massiangelone73@gmail.com" method="POST">
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="col">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+                </div>
+                <button type="submit" class="button">Get In Touch</button>
+              </form>
+        </section>
+    
+    <!-- Aggiungo il footer in cui ci metterò i link di Linkedin, Facebook, Instagram e GitHub -->
+    
+        <footer>
+            <div>
+                <a href="https://www.linkedin.com/in/massimiliano-angelone-843a2a210/"><img class="logo" src="/assets/images/linkedin-logo.svg" alt="Linkedin"></a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/massiangelone/"><img src="/assets/images/facebook-logo.svg" alt="Facebook"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/massi_angelone/"><img class="logo" src="/assets/images/instagram-logo.svg" alt="Instagram"></a>
+            </div>
+            <div>
+                <a href="https://github.com/maxange-developer"><img src="/assets/images/github-logo.svg" alt="GitHub"></a>
+            </div>
+        </footer>
 </body>
 </html>
