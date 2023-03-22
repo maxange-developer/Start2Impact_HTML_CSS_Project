@@ -1602,7 +1602,7 @@ footer a:focus {
     .header .menu {
         clear: none;
         float: right;
-        max-height: 0;
+        max-height: 232px;
     } 
 
     .header .menu-icon {
@@ -1648,7 +1648,7 @@ footer a:focus {
     .header .menu {
         clear: none;
         float: right;
-        max-height: 0;
+        max-height: 232px;
     }
 
     .header .menu-icon {
