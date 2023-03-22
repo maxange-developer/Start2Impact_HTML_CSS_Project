@@ -7,11 +7,6 @@
     src: url(/assets/font/Roboto-Regular.woff2) format(woff2);
 }
 
-@font-face {
-    font-family: "logo";
-    src: url(/assets/font/jd_code.ttf) format(ttf);
-}
-
 /* Il sito è impostato per layout smartphone da 350px a 490px di larghezza */
 
 * {
@@ -25,8 +20,6 @@
 body {
     background-image: url(/assets/images/background.png);
 }
-
-
 
 /* Styling Header */
 
@@ -1613,8 +1606,8 @@ footer a:focus {
     } 
 
     .header .menu-icon {
-        display: none;
-    }
+        display: none; 
+    } 
 
     #home {
         padding-top: 130px;
