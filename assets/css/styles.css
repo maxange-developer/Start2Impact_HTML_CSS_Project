@@ -7,6 +7,11 @@
     src: url(/assets/font/Roboto-Regular.woff2) format(woff2);
 }
 
+@font-face {
+    font-family: "logo";
+    src: url(/assets/font/jd_code.ttf) format(ttf);
+}
+
 /* Il sito è impostato per layout smartphone da 350px a 490px di larghezza */
 
 * {
@@ -23,53 +28,125 @@ body {
 
 
 
-/* Styling Navbar */
+/* Styling Header */
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header {
+    background-color: #d6f2ff;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
-    padding-top: 5px;
+    border-bottom: 2px solid #007fff;
 }
 
-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0px 10px 0px;
+.header a {
+    text-decoration: none;
+}
 
-    font-size: 13px;
+.header ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+    overflow: hidden;
 }
 
-ul a {
-    padding: 2px 6px 2px 6px;
-
+.header ul a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
     text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 50px;
 }
 
-ul a:visited {
-    text-decoration: none;
-}
-
-ul a:focus {
-    outline: none;
-}
-
-ul a:hover{
+.header ul a:hover {
     background-color: #007fff;
     color: white;
 }
 
-ul a:active {
+.header ul a:active {
     background-color: lightblue;
     color: white;
 }
 
+.header ul a:focus {
+    outline: none;
+}
 
+.header .logo {
+    float: left;
+    padding: 5px 0px 0px 5px;
+}
+
+.header .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.header .logo:focus {
+    outline: none;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 13px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+    background-color: #007fff;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+}
+
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after {
+    background-color: #007fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+}
+
+.header .menu-icon .nav-icon::before {
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon::after {
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+} 
+
+.header .menu-btn:checked~.menu-icon .nav-icon {
+    background-color: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked~.menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
 
 /* Styling Home section */
 
@@ -78,7 +155,7 @@ ul a:active {
     justify-content: center;
     align-items: center;
 
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 .img-container {
@@ -105,7 +182,7 @@ ul a:active {
     padding: 10px;
 }
 
-.presentation h1 {
+.presentation h2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -114,13 +191,13 @@ ul a:active {
     font-size: 15px;
 }
 
-.presentation h1 img {
+.presentation h2 img {
     padding: 5px;
     width: 30px;
     height: 30px;
 }
 
-.presentation h2 {
+.presentation h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -140,7 +217,7 @@ ul a:active {
     padding-top: 10px;
 }
 
-#bio h1 {
+#bio h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +226,7 @@ ul a:active {
     font-size: 15px
 }
 
-#bio h1 img {
+#bio h2 img {
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -184,7 +261,7 @@ ul a:active {
     padding-top: 10px;
 }
 
-#portfolio h1 {
+#portfolio h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,32 +270,78 @@ ul a:active {
     padding: 5px;
 }
 
-#portfolio h1 img {
+#portfolio h2 img {
     padding: 5px;
     width: 30px;
     height: 30px;
 }
 
-.gif{
+.first-project{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     margin: auto;
-    height: 150px;
+    height: 180px;
     width: 150px;
-    padding: 40px;
+    padding: 10px;
 
-    background-color: white;
+    background-color: #d6f2ff;
     border: 5px solid lightblue;
     border-radius: 30px;
 }
 
-.gif img {
-    width: 60px;
+.first-project img {
+    width: 130px;
     height: auto;
+
+    border: 2px solid #007fff;
+    border-radius: 10px;
 }
 
+.first-project img:hover {
+    box-shadow: 0px 0px 10px 3px #007FFF;
+}
+
+.first-project a {
+    text-decoration: none;
+
+    border-radius: 20px;
+}
+
+.first-project a:focus {
+    outline: none;
+}
+
+.first-project button {
+    margin-top: 8px;
+    width: 70px;
+    height: 20px;
+
+    font-size: 8px;
+
+    border: 2px solid lightblue;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+.first-project button:hover {
+    background-color: #007fff;
+    color: white;
+    border-color: #007fff;
+}
+
+.first-project button:active {
+    background-color: lightblue;
+    color: white;
+    border-color: lightblue;
+}
+
+.first-project button:focus {
+    outline: none;
+}
 
 
 /* Styling Skills section */
@@ -232,7 +355,7 @@ ul a:active {
     padding-top: 10px;
 }
 
-#skills h1 {
+#skills h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +363,7 @@ ul a:active {
     font-size: 15px;
 }
 
-#skills h1 img {
+#skills h2 img {
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -260,14 +383,25 @@ ul a:active {
     border-radius: 30px;
 }
 
+.grid a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+}
+
 .box1, 
 .box2,
 .box3,
 .box4,
 .box5,
-.box6{
+.box6 {
     display: flex;
     align-items: center;
+
+    margin: 5px;
 }
 
 .box1 img,
@@ -284,11 +418,29 @@ ul a:active {
     height: auto;
 }
 
-.grid h2 {
+.grid h3 {
     font-size: 10px;
     padding: 5px;
 }
 
+.box1:hover, 
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover {
+    background-color: lightblue;
+    border-radius: 20px;  
+}
+
+.box1 a:focus,
+.box2 a:focus,
+.box3 a:focus,
+.box4 a:focus,
+.box5 a:focus,
+.box6 a:focus {
+    outline: none;
+}
 
 
 /* Styling Contact Section */
@@ -302,7 +454,7 @@ ul a:active {
     padding-top: 10px;
 }
 
-#contact h1 {
+#contact h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,7 +462,7 @@ ul a:active {
     font-size: 15px;
 }
 
-#contact h1 img{
+#contact h2 img{
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -330,7 +482,7 @@ form {
     border-radius: 30px;
 }
 
-button,
+form button,
 input,
 textarea {
     box-sizing: border-box;
@@ -357,13 +509,19 @@ input[type="email"] {
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover {
-    border: 1px solid lightblue;
+    border-color: #007fff;
+}
+
+input[type="text"]:hover::placeholder,
+input[type="email"]:hover::placeholder,
+textarea:hover::placeholder {
+    color: lightblue;
 }
 
 input[type="text"]:active,
 input[type="email"]:active,
 textarea:active {
-    border: 1px solid lightblue;
+    border-color: #007fff;
 }
 
 input[type="text"]:focus,
@@ -375,7 +533,7 @@ textarea:focus {
 input[type="text"],
 input[type="email"],
 textarea,
-button {
+form button {
     margin: 2px;
     padding: 5px;
     border: 1px solid lightblue;
@@ -393,7 +551,7 @@ textarea::placeholder {
     color: #007fff;
 }
 
-button {
+form button {
     padding: 5px;
     width: 60px;
     height: 20px;
@@ -401,20 +559,20 @@ button {
     border-radius: 50px;
 }
 
-button:hover {
+form button:hover {
     background-color: #007fff;
     border-color: #007fff;
     color: white;
     cursor: pointer;
 }
 
-button:active {
+form button:active {
     background-color: lightblue;
     border-color: lightblue;
     color: white;
 }
 
-button:focus {
+form button:focus {
     outline: none;
 }
 
@@ -450,19 +608,16 @@ footer a:focus {
 /* Media Query 0px -> 350px */
 
 @media screen and (max-width: 350px) {
-    ul {
-        font-size: 9px;
-    }
     
     .img-container img {
         width: 50px;
     }
 
-    .presentation h1 {
+    .presentation h2 {
         font-size: 12px;
     }
 
-    .presentation h2 {
+    .presentation h3 {
         font-size: 8px;
     }
 }
@@ -487,21 +642,34 @@ footer a:focus {
     }
     
     #bio p,
-    .gif,
+    .first-project,
     .grid,
     form {
         border: 6px solid lightblue;
         border-radius: 30px;
     }
 
-    /* Navbar media queries */
+    /* Header media queries */
 
-    ul {
-        font-size: 18px;
+    .header {
+        border-bottom: 3px solid #007fff;
     }
 
-    ul a {
-        padding: 4px 8px 4px 8px;
+    .header .logo {
+        padding: 10px 0px 5px 10px;
+    }
+
+    .header .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .header .menu-icon {
+        padding: 24px;
+    }
+
+    #home {
+        padding-top: 70px;
     }
 
     
@@ -516,29 +684,29 @@ footer a:focus {
         width: 120px;
     }
 
-    .presentation h1 {
+    .presentation h2 {
         font-size: 20px;
     }
 
-    .presentation h2 {
+    .presentation h3 {
         font-size: 13px;
     }
 
     /* Section Heading media queries */
 
-    #bio h1,
-    #portfolio h1,
-    #skills h1,
-    #contact h1 {
+    #bio h2,
+    #portfolio h2,
+    #skills h2,
+    #contact h2 {
         font-size: 20px;
         padding: 10px;
     }
 
-    .presentation h1 img,
-    #bio h1 img,
-    #portfolio h1 img,
-    #skills h1 img,
-    #contact h1 img {
+    .presentation h2 img,
+    #bio h2 img,
+    #portfolio h2 img,
+    #skills h2 img,
+    #contact h2 img {
         width: 50px;
         height: 50px;
         padding: 10px;
@@ -555,14 +723,23 @@ footer a:focus {
 
     /* Portfolio media queries */
 
-    .gif {
+    .first-project {
         width: 200px;
-        height: 200px;
+        height: 230px;
     }
 
-    .gif img {
-        width: 80px;
+    .first-project img {
+        width: 160px;
         height: auto;
+
+        border: 3px solid #007fff;
+    }
+
+    .first-project button {
+        width: 90px;
+        height: 30px;
+
+        font-size: 12px;
     }
 
     /* Skills media queries */
@@ -582,7 +759,7 @@ footer a:focus {
         width: 60px;
     }
 
-    .grid h2 {
+    .grid h3 {
         font-size: 13px;
         padding: 10px;
     }
@@ -607,7 +784,7 @@ footer a:focus {
         padding: 10px;
     }
 
-    button {
+    form button {
         width: 80px;
         height: 30px;
 
@@ -617,7 +794,7 @@ footer a:focus {
     textarea,
     input[type="text"],
     input[type="email"],
-    button {
+    form button {
         border-radius: 20px;
         border: 2px solid lightblue;
     }
@@ -652,26 +829,49 @@ footer a:focus {
     }
 
     #bio p,
-    .gif,
+    .first-project,
     .grid,
     form {
         border: 7px solid lightblue;
         border-radius: 40px;
     }
 
-    /* Navbar media queries */
+    /* Header media queries */
 
-    nav {
-        padding-top: 15px;
+    .header {
+        border-bottom: 3px solid #007fff;
     }
 
-    ul {
-        font-size: 20px;
+    .header .logo {
+        padding: 15px 0px 10px 15px;
     }
 
-    ul a {
-        padding: 6px 12px 6px 12px;
+    .header .logo img {
+        width: 150px;
+        height: auto;
     }
+
+    .header .menu-icon {
+        padding: 30px;
+    }
+
+    .header .menu-icon .nav-icon {
+        width: 25px;
+        height: 3px;
+    }
+
+    .header .menu-icon .nav-icon::before {
+        top: -7px;
+    }
+
+    .header .menu-icon .nav-icon::after {
+        top: 7px;
+    }
+
+    #home {
+        padding-top: 100px;
+    }
+
 
     /* Home media queries */
 
@@ -687,29 +887,29 @@ footer a:focus {
         padding: 15px;
     }
 
-    .presentation h1 {
+    .presentation h2 {
         font-size: 25px;
     }
 
-    .presentation h2 {
+    .presentation h3 {
         font-size: 18px;
     }
 
     /* Section Heading media queries */
 
-    #bio h1,
-    #portfolio h1,
-    #skills h1,
-    #contact h1 {
+    #bio h2,
+    #portfolio h2,
+    #skills h2,
+    #contact h2 {
         font-size: 25px;
         padding: 15px;
     }
 
-    .presentation h1 img,
-    #bio h1 img,
-    #portfolio h1 img,
-    #skills h1 img,
-    #contact h1 img {
+    .presentation h2 img,
+    #bio h2 img,
+    #portfolio h2 img,
+    #skills h2 img,
+    #contact h2 img {
         width: 60px;
         height: 60px;
         padding: 12px;
@@ -726,14 +926,25 @@ footer a:focus {
 
     /* Portfolio media queries */
 
-    .gif {
-        width: 250px;
-        height: 250px;
+    .first-project {
+        width: 270px;
+        height: 320px;
     }
 
-    .gif img {
-        width: 100px;
+    .first-project img {
+        width: 220px;
         height: auto;
+
+        border: 4px solid #007fff;
+    }
+
+    .first-project button {
+        width: 120px;
+        height: 40px;
+
+        font-size: 14px;
+
+        margin-top: 15px;
     }
 
     /* Skills media queries */
@@ -753,7 +964,7 @@ footer a:focus {
         width: 80px;
     }
 
-    .grid h2 {
+    .grid h3 {
         font-size: 18px;
         padding: 10px;
     }
@@ -783,7 +994,7 @@ footer a:focus {
         margin: 3px;
     }
 
-    button {
+    form button {
         width: 90px;
         height: 35px;
 
@@ -793,7 +1004,7 @@ footer a:focus {
     textarea,
     input[type="text"],
     input[type="email"],
-    button {
+    form button {
         border-radius: 20px;
         border: 2px solid lightblue;
     }
@@ -828,25 +1039,11 @@ footer a:focus {
     }
 
     #bio p,
-    .gif,
+    .first-project,
     .grid,
     form {
         border: 8px solid lightblue;
         border-radius: 40px;
-    }
-
-    /* Navbar media queries */
-
-    nav {
-        padding-top: 20px;
-    }
-
-    ul {
-        font-size: 25px;
-    }
-
-    ul a {
-        padding: 8px 14px 8px 14px;
     }
 
     /* Home media queries */
@@ -863,29 +1060,29 @@ footer a:focus {
         padding: 20px;
     }
 
-    .presentation h1 {
+    .presentation h2 {
         font-size: 30px;
     }
 
-    .presentation h2 {
+    .presentation h3 {
         font-size: 20px;
     }
 
     /* Section Heading media queries */
 
-    #bio h1,
-    #portfolio h1,
-    #skills h1,
-    #contact h1 {
+    #bio h2,
+    #portfolio h2,
+    #skills h2,
+    #contact h2 {
         font-size: 30px;
         padding: 20px;
     }
 
-    .presentation h1 img,
-    #bio h1 img,
-    #portfolio h1 img,
-    #skills h1 img,
-    #contact h1 img {
+    .presentation h2 img,
+    #bio h2 img,
+    #portfolio h2 img,
+    #skills h2 img,
+    #contact h2 img {
         width: 70px;
         height: 70px;
         padding: 13px;
@@ -902,14 +1099,25 @@ footer a:focus {
 
     /* Portfolio media queries */
 
-    .gif {
-        width: 300px;
-        height: 300px;
+    .first-project {
+        width: 320px;
+        height: 370px;
     }
 
-    .gif img {
-        width: 110px;
+    .first-project img {
+        width: 270px;
         height: auto;
+
+        border: 4px solid #007fff;
+    }
+
+    .first-project button {
+        width: 150px;
+        height: 40px;
+
+        font-size: 15px;
+
+        margin-top: 20px;
     }
 
     /* Skills media queries */
@@ -929,7 +1137,7 @@ footer a:focus {
         width: 90px;
     }
 
-    .grid h2 {
+    .grid h3 {
         font-size: 20px;
         padding: 10px;
     }
@@ -959,7 +1167,7 @@ footer a:focus {
         margin: 5px;
     }
 
-    button {
+    form button {
         width: 100px;
         height: 40px;
 
@@ -969,7 +1177,7 @@ footer a:focus {
     textarea,
     input[type="text"],
     input[type="email"],
-    button {
+    form button {
         border-radius: 20px;
         border: 2px solid lightblue;
     }
@@ -1005,25 +1213,11 @@ footer a:focus {
     }
 
     #bio p,
-    .gif,
+    .first-project,
     .grid,
     form {
         border: 10px solid lightblue;
         border-radius: 50px;
-    }
-
-    /* Navbar media queries */
-
-    nav {
-        padding-top: 30px;
-    }
-
-    ul {
-        font-size: 35px;
-    }
-
-    ul a {
-        padding: 10px 20px 10px 20px;
     }
 
     /* Home media queries */
@@ -1040,29 +1234,29 @@ footer a:focus {
         padding: 30px;
     }
 
-    .presentation h1 {
+    .presentation h2 {
         font-size: 40px;
     }
 
-    .presentation h2 {
+    .presentation h3 {
         font-size: 25px;
     }
 
     /* Section Heading media queries */
 
-    #bio h1,
-    #portfolio h1,
-    #skills h1,
-    #contact h1 {
+    #bio h2,
+    #portfolio h2,
+    #skills h2,
+    #contact h2 {
         font-size: 40px;
         padding: 25px;
     }
 
-    .presentation h1 img,
-    #bio h1 img,
-    #portfolio h1 img,
-    #skills h1 img,
-    #contact h1 img {
+    .presentation h2 img,
+    #bio h2 img,
+    #portfolio h2 img,
+    #skills h2 img,
+    #contact h2 img {
         width: 80px;
         height: 80px;
         padding: 15px;
@@ -1071,28 +1265,50 @@ footer a:focus {
     /* Bio media queries */
 
     #bio p {
-        font-size: 25px;
+        font-size: 20px;
         padding: 25px;
 
-        max-width: 600px;
+        max-width: 500px;
     }
 
     /* Portfolio media queries */
 
-    .gif {
-        width: 350px;
-        height: 350px;
+    .first-project {
+        width: 370px;
+        height: 420px;
     }
 
-    .gif img {
-        width: 120px;
+    .first-project img {
+        width: 300px;
         height: auto;
+
+        border: 5px solid #007fff;
+        border-radius: 20px;
+    }
+
+    .first-project button {
+        width: 160px;
+        height: 45px;
+
+        font-size: 16px;
+
+        margin-top: 20px;
     }
 
     /* Skills media queries */
 
     .grid {
-        grid-auto-rows: 120px;
+        grid-auto-rows: 110px;
+        gap: 15px;
+    }
+
+    .box1, 
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        margin: 10px;
     }
 
     .box1 img,
@@ -1106,7 +1322,7 @@ footer a:focus {
         width: 110px;
     }
 
-    .grid h2 {
+    .grid h3 {
         font-size: 25px;
         padding: 15px;
     }
@@ -1136,7 +1352,7 @@ footer a:focus {
         margin: 8px;
     }
 
-    button {
+    form button {
         width: 130px;
         height: 50px;
 
@@ -1145,7 +1361,7 @@ footer a:focus {
 
     input[type="text"],
     input[type="email"],
-    button {
+    form button {
         border-radius: 50px;
         border: 2px solid lightblue;
     }
@@ -1173,182 +1389,280 @@ footer a:focus {
 
 @media screen and (min-width: 1201px) {
 
-        /* General media queries */
+    /* General media queries */
 
-        #home,
-        #bio,
-        #portfolio,
-        #skills,
-        #contact,
-        footer {
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
+    #bio,
+    #portfolio,
+    #skills,
+    #contact,
+    footer {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
     
-        #bio p,
-        .gif,
-        .grid,
-        form {
-            border: 10px solid lightblue;
-            border-radius: 60px;
-        }
+    #bio p,
+    .first-project,
+    .grid,
+    form {
+        border: 10px solid lightblue;
+        border-radius: 60px;
+    }
     
-        /* Navbar media queries */
+    /* Home media queries */
     
-        nav {
-            padding-top: 30px;
-        }
+    .img-container {
+        border: 10px solid #007fff
+    }
     
-        ul {
-            font-size: 35px;
-        }
+    .img-container img {
+        width: 250px;
+    }
     
-        ul a {
-            padding: 12px 24px 12px 24px;
-            margin: 10px;
-        }
+    .presentation {
+        padding: 40px;
+    }
     
-        /* Home media queries */
+    .presentation h2 {
+        font-size: 45px;
+    }
     
-        .img-container {
-            border: 10px solid #007fff
-        }
+    .presentation h3 {
+        font-size: 25px;
+    }
     
-        .img-container img {
-            width: 250px;
-        }
+    /* Section Heading media queries */
     
-        .presentation {
-            padding: 40px;
-        }
+    #bio h2,
+    #portfolio h2,
+    #skills h2,
+    #contact h2 {
+        font-size: 40px;
+        padding: 10px;
+    }
     
-        .presentation h1 {
-            font-size: 45px;
-        }
+    .presentation h2 img,
+    #bio h2 img,
+    #portfolio h2 img,
+    #skills h2 img,
+    #contact h2 img {
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+    }
     
-        .presentation h2 {
-            font-size: 25px;
-        }
+    /* Bio media queries */
     
-        /* Section Heading media queries */
+    #bio p {
+        font-size: 20px;
+        padding: 30px;
     
-        #bio h1,
-        #portfolio h1,
-        #skills h1,
-        #contact h1 {
-            font-size: 40px;
-            padding: 10px;
-        }
+        max-width: 550px;
+    }
     
-        .presentation h1 img,
-        #bio h1 img,
-        #portfolio h1 img,
-        #skills h1 img,
-        #contact h1 img {
-            width: 80px;
-            height: 80px;
-            padding: 15px;
-        }
+    /* Portfolio media queries */
     
-        /* Bio media queries */
+    .first-project {
+        width: 420px;
+        height: 470px;
+    }
     
-        #bio p {
-            font-size: 20px;
-            padding: 30px;
-    
-            max-width: 550px;
-        }
-    
-        /* Portfolio media queries */
-    
-        .gif {
-            width: 350px;
-            height: 350px;
-        }
-    
-        .gif img {
-            width: 100px;
-            height: auto;
-        }
-    
-        /* Skills media queries */
-    
-        .grid {
-            grid-auto-rows: 125px;
-        }
-    
-        .box1 img,
-        .box2 img, 
-        .box3 img,
-        .box4 img,
-        .box5 img,
-        .box6 img {
-    
-            padding: 20px;
-            width: 125px;
-        }
-    
-        .grid h2 {
-            font-size: 25px;
-            padding: 20px;
-        }
-    
-        /* Contact media queries */
-    
-        form {
-            padding: 20px;
-        }
-    
-        textarea {
-            width: 400px;
-        }
-    
-        input[type="text"],
-        input[type="email"] {
-            width: 400px;
-            height: 50px;
-        }
-    
-        textarea,
-        input[type="text"],
-        input[type="email"] {
-            font-size: 23px;
-    
-            padding: 20px;
-            margin: 5px;
-        }
-    
-        button {
-            width: 150px;
-            height: 50px;
+    .first-project img {
+        width: 350px;
+        height: auto;
 
-            margin-top: 10px;
+        border: 6px solid #007fff;
+        border-radius: 25px;
+    }
+
+    .first-project button {
+        width: 170px;
+        height: 50px;
+
+        font-size: 16px;
+
+        margin-top: 25px;
+    }
     
-            font-size: 18px;
-        }
+    /* Skills media queries */
     
-        input[type="text"],
-        input[type="email"],
-        button {
-            border-radius: 50px;
-            border: 3px solid lightblue;
-        }
+    .grid {
+        grid-auto-rows: 125px;
+        gap: 25px;
+    }
+
+    .box1, 
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        margin: 15px;
+    }
     
-        textarea {
-            border-radius: 35px;
-            border: 3px solid lightblue;
-        }
+    .box1 img,
+    .box2 img, 
+    .box3 img,
+    .box4 img,
+    .box5 img,
+    .box6 img {
     
-        /* Footer media queries */
+        padding: 15px;
+        width: 125px;
+    }
     
-        footer img {
-            margin: 8px;
-            width: 70px;
-            height: auto;
-        }
+    .grid h3 {
+        font-size: 25px;
+        padding: 20px;
+    }
     
-        footer .logo {
-            width: 53px;
-        }
+    /* Contact media queries */
     
+    form {
+        padding: 20px;
+    }
+    
+    textarea {
+        width: 400px;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        width: 400px;
+        height: 50px;
+    }
+    
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        font-size: 23px;
+    
+        padding: 20px;
+        margin: 5px;
+    }
+    
+    form button {
+        width: 150px;
+        height: 50px;
+
+        margin-top: 10px;
+    
+        font-size: 18px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    form button {
+        border-radius: 50px;
+        border: 3px solid lightblue;
+    }
+    
+    textarea {
+        border-radius: 35px;
+        border: 3px solid lightblue;
+    }
+    
+    /* Footer media queries */
+    
+    footer img {
+        margin: 8px;
+        width: 70px;
+        height: auto;
+    }
+    
+    footer .logo {
+        width: 53px;
+    }
+    
+}
+
+/* Header Media Query 769px -> 1200px */
+
+@media screen and (min-width: 769px) {
+    .header {
+        border-bottom: 4px solid #007fff;
+    }
+
+    .header .logo {
+        padding: 15px 0px 5px 15px;
+    }
+
+    .header .logo img {
+        width: 170px;
+        height: auto;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        font-size: 16px;
+        padding: 10px 15px 10px 15px;
+        margin-top: 15px;
+        margin-right: 5px;
+    }
+
+    .header ul a:hover {
+        border-radius: 50px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: 0;
+    } 
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    #home {
+        padding-top: 130px;
+    }
+}
+
+/* Header Media Query 1201+px */
+
+@media screen and (min-width: 1201px) {
+    .header {
+        border-bottom: 4px solid #007fff;
+    }
+
+    .header .logo {
+        padding: 20px 0px 10px 20px;
+    }
+
+    .header .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        font-size: 25px;
+        padding: 15px 20px 15px 20px;
+        margin-top: 13px;
+        margin-right: 20px;
+    }
+
+    .header ul a:hover {
+        border-radius: 100px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: 0;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    #home {
+        padding-top: 180px;
+    }
 }

@@ -4,41 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Massi Angelone | Full Stack Developer</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <link rel="shortvut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Massi Angelone | Full Stack Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxdeveloper.netlify.app/">
+    <meta property="og:image" content="https/maxdeveloper.netlify.app">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
         <!-- Aggiungo Barra di Navigazione con i vari Link -->
-        <nav>
-            <ul>
+        <header class="header">
+            <a href="/" class="logo"><img src="/assets/images/HeaderBlu.png" alt="Logo"></a>
+            <input class="menu-btn" id="menu-btn" type="checkbox">
+            <label for="menu-btn" class="menu-icon">
+                <span class="nav-icon"></span>
+            </label>
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#bio">About Me</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
-        </nav>
+        </header>
     
         <!-- Aggiungo la prima Section Home, dove inserisco l'immagine e la presentazione -->
     
         <section id="home">
             <div class="img-container">
-                <img src="assets/images/profilo.png">
+                <img src="assets/images/profilo.png" alt="Profile">
             </div>
             <div class="presentation">
-                <h1>Hi!<img src="/assets/images/emoji_ciao.png"> I'm Massimiliano Angelone</h1>
-                <h2>Full Stack Developer</h2>
+                <h2>Hi!<img src="/assets/images/emoji_ciao.png" alt="Hello"> I'm Massimiliano Angelone</h2>
+                <h3>Full Stack Developer</h3>
             </div>
         </section>
     
         <!-- Aggiungo un'altra Section in cui inserirò la Biografia -->
     
         <section id="bio">
-            <h1>About Me <img src="/assets/images/emoji_worker.png"></h1>
+            <h2>About Me <img src="/assets/images/emoji_worker.png" alt="Worker"></h2>
             <p>Hi, I'm Massimiliano from Ancona, Italy. <br> <br>
                 I'm a future Full-Stack Developer. <br> <br>
                 I love everything related to the web. Especially programming, web design, social media and metaverse. <br> <br>
@@ -50,43 +61,62 @@
             </p>
         </section>
     
-        <!-- Aggiungo la Section Portfolio in cui andrò a mettere una gif di caricamento per far capire che questa parte verrà completata man mano che faccio i progetti  -->
+        <!-- Aggiungo la Section Portfolio in cui andrò a mettere una casella che rimanda al mio primo progetto (questo)  -->
     
         <section id="portfolio">
-            <h1>Portfolio <img src="/assets/images/emoji_valigetta.png"></h1>
-            <div class="gif">
-                <img src="/assets/GIFs/load_gif.gif">
+            <h2>Portfolio <img src="/assets/images/emoji_valigetta.png" alt="Case"></h2>
+            <div class="first-project">
+                <img src="/assets/images/first-project.PNG" alt="website">
+                <a href="https://maxdeveloper.netlify.app" rel="noopener" target="_blank">
+                    <button>First Project</button>
+                </a>      
             </div>
         </section>
     
         <!-- Aggiungo la Section Skills in cui andrò a fare una lista con i programmi che so usare. Aggiungerò un'immagine con affianco il nome del programma -->
     
         <section id="skills">
-            <h1>Skills <img src="/assets/images/emoji_skills.png"></h1>
+            <h2>Skills <img src="/assets/images/emoji_skills.png" alt="Rocket"></h2>
             <div class="grid">
                 <div class="box1">
-                    <img src="/assets/images/html-logo.svg">
-                    <h2>HTML</h2>
+                    <a href="https://en.wikipedia.org/wiki/HTML" rel="noopener" target="_blank">
+                        <img src="/assets/images/html-logo.svg" alt="HTML">
+                        <h3>HTML</h3>
+                    </a>
+                    
                 </div>
                 <div class="box2">
-                    <img src="/assets/images/css-logo.svg">
-                    <h2>CSS</h2>
+                    <a href="https://en.wikipedia.org/wiki/CSS" rel="noopener" target="_blank">
+                        <img src="/assets/images/css-logo.svg" alt="CSS">
+                        <h3>CSS</h3>
+                    </a>
+                    
                 </div>
                 <div class="box3">
-                    <img src="/assets/images/bootstrap-logo.svg">
-                    <h2>Bootstrap</h2>
+                    <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" rel="noopener" target="_blank">
+                        <img src="/assets/images/bootstrap-logo.svg" alt="Bootstrap">
+                        <h3>Bootstrap</h3>
+                    </a>
+                    
                 </div>
                 <div class="box4">
-                    <img src="/assets/images/github-logo.svg">
-                    <h2>GitHub</h2>
+                    <a href="https://en.wikipedia.org/wiki/GitHub" rel="noopener" target="_blank">
+                        <img src="/assets/images/github-logo.svg" alt="Github">
+                        <h3>GitHub</h3>
+                    </a>
                 </div>
                 <div class="box5">
-                    <img src="/assets/images/sass-logo.svg">
-                    <h2>SASS</h2>
+                    <a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)" rel="noopener" target="_blank">
+                        <img src="/assets/images/sass-logo.svg" alt="Sass">
+                        <h3>SASS</h3>
+                    </a>
+                    
                 </div>
                 <div class="box6">
-                    <img src="/assets/images/wordpress-logo.svg">
-                    <h2>Wordpress</h2>
+                    <a href="https://en.wikipedia.org/wiki/WordPress" rel="noopener" target="_blank">
+                        <img src="/assets/images/wordpress-logo.svg" alt="Wordpress">
+                        <h3>Wordpress</h3>
+                    </a>
                 </div>
             </div>
         </section>
@@ -94,7 +124,7 @@
         <!-- Aggiungo la Section Contact in cui farò un form per essere contattato -->
     
         <section id="contact">
-            <h1>Chat with me! <img src="/assets/images/emoji_lettera.png"></h1>
+            <h2>Chat with me! <img src="/assets/images/emoji_lettera.png" alt="Letter"></h2>
             <form target="_blank" action="https://formsubmit.co/massiangelone73@gmail.com" method="POST">
                 <div class="form-group">
                   <div class="form-row">
@@ -117,16 +147,16 @@
     
         <footer>
             <div>
-                <a href="https://www.linkedin.com/in/massimiliano-angelone-843a2a210/"><img class="logo" src="/assets/images/linkedin-logo.svg" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/massimiliano-angelone-843a2a210/" rel="noopener" target="_blank"><img class="logo" src="/assets/images/linkedin-logo.svg" alt="Linkedin"></a>
             </div>
             <div>
-                <a href="https://www.facebook.com/massiangelone/"><img src="/assets/images/facebook-logo.svg" alt="Facebook"></a>
+                <a href="https://www.facebook.com/massiangelone/" rel="noopener" target="_blank"><img src="/assets/images/facebook-logo.svg" alt="Facebook"></a>
             </div>
             <div>
-                <a href="https://www.instagram.com/massi_angelone/"><img class="logo" src="/assets/images/instagram-logo.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/massi_angelone/" rel="noopener" target="_blank"><img class="logo" src="/assets/images/instagram-logo.svg" alt="Instagram"></a>
             </div>
             <div>
-                <a href="https://github.com/maxange-developer"><img src="/assets/images/github-logo.svg" alt="GitHub"></a>
+                <a href="https://github.com/maxange-developer" rel="noopener" target="_blank"><img src="/assets/images/github-logo.svg" alt="GitHub"></a>
             </div>
         </footer>
 </body>
