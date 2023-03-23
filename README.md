@@ -39,7 +39,7 @@ To run this project:
 # Know_Bugs
 
 * No know bugs
-* 
+
 # License
 
 * [Mit](https://choosealicense.com/licenses/mit/)
