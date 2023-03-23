@@ -8,7 +8,7 @@ This is my first project on Start2Impact University for become a Full Stack Deve
 
 I tried to create a site with a simple and fluid structure, so as to make the user experience as simple as possible. In the site I used a combination of colors that recall the sky to convey to the user tranquility and positivity that are two moods that represent me.
 
-I started by creating a responsive menu where in mobile mode is sticky (hooked to the top of the screen), while in tablet and pc mode becomes a classic menu with the various sections on the site visible.
+I started by creating a sticky responsive menu (hooked to the top of the screen). In mobile mode I inserted the drop-down menu while in tablet and pc mode the menu becomes classic with the various sections on the site visible.
 
 I continued by creating the presentation section where I inserted a photo of myself and a welcome phrase.
 
