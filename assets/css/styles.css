@@ -45,9 +45,10 @@ body {
 
 .header ul a {
     display: block;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 10px;
 }
 
 .header ul a:hover {
@@ -286,7 +287,7 @@ body {
 }
 
 .first-project img {
-    width: 130px;
+    width: 120px;
     height: auto;
 
     border: 2px solid #007fff;
@@ -648,6 +649,11 @@ footer a:focus {
         border-bottom: 3px solid #007fff;
     }
 
+    .header ul a {
+        padding: 13px;
+        font-size: 13px;
+    }
+
     .header .logo {
         padding: 10px 0px 5px 10px;
     }
@@ -833,6 +839,11 @@ footer a:focus {
 
     .header {
         border-bottom: 3px solid #007fff;
+    }
+
+    .header ul a {
+        padding: 15px;
+        font-size: 15px;
     }
 
     .header .logo {
@@ -1098,7 +1109,7 @@ footer a:focus {
     }
 
     .first-project img {
-        width: 270px;
+        width: 250px;
         height: auto;
 
         border: 4px solid #007fff;
@@ -1460,7 +1471,7 @@ footer a:focus {
     }
     
     .first-project img {
-        width: 350px;
+        width: 330px;
         height: auto;
 
         border: 6px solid #007fff;
