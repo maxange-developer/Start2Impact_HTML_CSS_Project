@@ -281,7 +281,7 @@ body {
     width: 150px;
     padding: 10px;
 
-    background-color: #d6f2ff;
+    background-color: white;
     border: 5px solid lightblue;
     border-radius: 30px;
 }
@@ -315,6 +315,7 @@ body {
 
     font-size: 8px;
 
+    background-color: #d6f2ff;
     border: 2px solid lightblue;
     border-radius: 50px;
 
@@ -550,6 +551,7 @@ form button {
     width: 60px;
     height: 20px;
 
+    background-color: #d6f2ff;
     border-radius: 50px;
 }
 
