@@ -1,4 +1,4 @@
-# Start2Impact_HTML_CSS_Project 💻
+# Start2Impact_HTML_CSS_Project :file_folder:
 
 Website: https://maxdeveloper.netlify.app/
 
@@ -22,29 +22,30 @@ Then I created the contacts section where I made a form where filling in all the
 
 Finally I created a footer in which I inserted the images of Facebook, Instagram, Linkedin and GitHub. Clicking on it, the user will be redirect to my profile of the relative social.
 
-# Technologies
+# Technologies :computer:
 
 Project created with:
 * HTML5
 * CSS3
 
-# Installation
+# Installation :rocket:
 
 To run this project:
 * git clone https://github.com/maxange-developer/Start2Impact_HTML_CSS_Project.git
-# Collaboration
+
+# Collaboration :facepunch:
 
 * No Collaboration
 
-# Know_Bugs
+# Know_Bugs :anger:
 
 * No know bugs
 
-# License
+# License :page_facing_up:
 
 * [Mit](https://choosealicense.com/licenses/mit/)
 
-# Contact Information
+# Contact Information :speech_balloon:
 
 * E-Mail: massiangelone73@gmail.com
 * Linkedin: https://www.linkedin.com/in/massimiliano-angelone-843a2a210/
