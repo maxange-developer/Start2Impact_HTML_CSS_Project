@@ -169,32 +169,30 @@ body {
     border-radius: 50%;
 }
 
-.presentation {
+#home h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+
     padding: 10px;
 }
 
-.presentation h2 {
+h1 .presentation {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
-    
     font-size: 15px;
 }
 
-.presentation h2 img {
+h1 .presentation img {
     padding: 5px;
     width: 30px;
     height: 30px;
 }
 
-.presentation h3 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+h1 .description {
     font-size: 10px;
 }
 
@@ -609,11 +607,11 @@ footer a:focus {
         width: 50px;
     }
 
-    .presentation h2 {
+    h1 .presentation {
         font-size: 12px;
     }
 
-    .presentation h3 {
+    h1 .description {
         font-size: 8px;
     }
 }
@@ -685,11 +683,15 @@ footer a:focus {
         width: 120px;
     }
 
-    .presentation h2 {
+    #home h1 {
+        padding: 15px;
+    }
+
+    h1 .presentation {
         font-size: 20px;
     }
 
-    .presentation h3 {
+    h1 .description {
         font-size: 13px;
     }
 
@@ -703,7 +705,7 @@ footer a:focus {
         padding: 10px;
     }
 
-    .presentation h2 img,
+    h1 .presentation img,
     #bio h2 img,
     #portfolio h2 img,
     #skills h2 img,
@@ -889,15 +891,15 @@ footer a:focus {
         width: 140px;
     }
 
-    .presentation {
-        padding: 15px;
+    #home h1 {
+        padding: 20px;
     }
 
-    .presentation h2 {
+    h1 .presentation {
         font-size: 25px;
     }
 
-    .presentation h3 {
+    h1 .description {
         font-size: 18px;
     }
 
@@ -911,7 +913,7 @@ footer a:focus {
         padding: 15px;
     }
 
-    .presentation h2 img,
+    h1 .presentation img,
     #bio h2 img,
     #portfolio h2 img,
     #skills h2 img,
@@ -1062,18 +1064,18 @@ footer a:focus {
         width: 160px;
     }
 
-    .presentation {
-        padding: 20px;
+    #home h1 {
+        padding: 25px;
     }
 
-    .presentation h2 {
+    h1 .presentation {
         font-size: 30px;
     }
 
-    .presentation h3 {
+    h1 .description {
         font-size: 20px;
     }
-
+    
     /* Section Heading media queries */
 
     #bio h2,
@@ -1084,7 +1086,7 @@ footer a:focus {
         padding: 20px;
     }
 
-    .presentation h2 img,
+    h1 .presentation img,
     #bio h2 img,
     #portfolio h2 img,
     #skills h2 img,
@@ -1236,15 +1238,15 @@ footer a:focus {
         width: 200px;
     }
 
-    .presentation {
+    #home h1 {
         padding: 30px;
     }
 
-    .presentation h2 {
+    h1 .presentation {
         font-size: 40px;
     }
 
-    .presentation h3 {
+    h1 .description {
         font-size: 25px;
     }
 
@@ -1258,7 +1260,7 @@ footer a:focus {
         padding: 25px;
     }
 
-    .presentation h2 img,
+    h1 .presentation img,
     #bio h2 img,
     #portfolio h2 img,
     #skills h2 img,
@@ -1424,15 +1426,15 @@ footer a:focus {
         width: 250px;
     }
     
-    .presentation {
+    #home h1 {
         padding: 40px;
     }
     
-    .presentation h2 {
+    h1 .presentation {
         font-size: 45px;
     }
     
-    .presentation h3 {
+    h1 .description {
         font-size: 25px;
     }
     
@@ -1446,7 +1448,7 @@ footer a:focus {
         padding: 10px;
     }
     
-    .presentation h2 img,
+    h1 .presentation img,
     #bio h2 img,
     #portfolio h2 img,
     #skills h2 img,
